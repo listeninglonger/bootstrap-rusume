@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <title>我的简历</title>
+  <style>
+    /* scroll */
+    body {
+  position: relative;
+}
+    /*导航 */
+    .navbar-brand img {
+      width: 50px;
+      position: relative;
+      top: -12px
+    }
+/* 封面 */
+    .cover-bk {
+      height: 90px;
+      background-color: rgba(53, 114, 155, 0.5);
+    }
+
+    .resume-cover {
+      color: white;
+      margin-top: 20%;
+      font-family: "幼圆";
+    }
+    .resume-cover h2{
+      font-size: 72px;
+    }
+    .contect{
+      display: flex;
+      justify-content: center;
+      font-family: "微软雅黑";
+    }
+    .contect p{
+      margin:10px 20px;
+    }
+    .rsm-jumb {
+      margin-top: 70px;
+    }
+
+    .jumbotron {
+      background: url('./img/cover.jpg') no-repeat center center;
+      background-size: 150%;
+      height: 500px;
+    }
+/* 箭头 */
+    .down-arrow {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+  
+/* 技能 */
+    .glyphicon-menu-down {
+      color: #666;
+      font-size: 40px;
+    }
+
+    .skill-logo {
+      font-size: 100px;
+      color: rgb(46, 82, 105);
+      border-radius: 50%;
+      text-align: center;
+    }
+
+    .caption{
+      background-color: #ccc;
+      margin: 20px auto;
+      height: 100px;
+
+    }
+/* 版权 */
+    .copy {
+      background-color: #666;
+      font-size: 20px;
+      color: #fff;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    /* 标签页 */
+
+    .tab-img {
+      width: 100%;
+      padding:10px;
+      border-radius: 50px;
+      display: inline-block;
+      float: none;
+      vertical-align: center;
+     
+    }
+   
+    .company p {
+      display: inline-block;
+      font-size: 20px;
+    }
+
+    .company p:last-child {
+      float: right;
+      margin-right: 30px;
+    }
+
+    .work-content {
+      line-height: 40px;
+      size: 18px;
+      margin-right: 30px;
+     padding-left: 10px;
+    }
+   
+    .tab-content {
+      
+      background-color: #666;
+      color: #fff;
+      margin-bottom:20px;
+      margin-left: 1px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    
+      
+    }
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+      color:rgb(117, 211, 255);
+      background-color: #666;
+    }
+    .nav-tabs>li>a{
+      color: #777;
+    }
+    
+    
+   
+/* 作品 */
+    #demo .container .row {
+      margin: 0 auto;
+    }
+
+    #demo img {
+      width: 100%;
+    }
+
+    #demo .caption {
+      height: auto;
+    }
+/* 模态框 */
+    .modal-body ul {
+      margin: 5px 30px;
+      list-style: none;
+    }
+
+    .modal-body img {
+      width: 100%;
+    }
+    /* 其他 */
+    #others{
+      margin:20px auto;
+      width: 1000px;
+      height:563px ;
+    }
+    #others ul li{
+      list-style: none;
+      text-align: center;
+      height: 20px;
+      line-height: 20px;
+      margin:auto 0;
+      padding:auto 0
+    }
+
+    .carousel-caption{
+     height: 50%;
+     top: 25%;
+     background-color: rgba(0, 0, 0, 0.7);
+    }
+    .carousel-caption ul{
+      margin-left: -40px;
+      margin-top:40px
+    }
+  </style>
+</head>
+
+<body  data-spy="scroll" data-target="#navbar-example">
+  <!--  导航条 -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-example">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+         ListeningLonger
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">主页 <span class="sr-only">(current)</span></a></li>
+          <li><a href="#skill">技能</a></li>
+          <li><a href="#ex">经历</a></li>
+          <li><a href="#demo">作品</a></li>
+          <li><a href="#others">其他</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- 展示大图 -->
+  <div class="container rsm-jumb">
+    <div class="jumbotron">
+      <div class="cover-bk resume-cover text-center">
+        <h2>我的简历</h2>
+        <h3>求职意向：前端开发</h3>
+        <div class="contect"><p>手机：152xxxxxxx</p>
+          <p>邮箱：xxx@126.com</p> </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  <!-- 下箭头 -->
+  <div class="container">
+    <div class="down-arrow text-center">
+      <a href="#skill" role="button">
+        <span class="glyphicon glyphicon-menu-down"></span>
+      </a>
+    </div>
+  </div>
+  <!-- 上下图文组合-缩略图-技能 -->
+  <div class="container" id="skill">
+    <div class="row">
+      <div class="col-sm-4 col-md-2 text-center">
+        <p><span class="glyphicon glyphicon-book skill-logo"></span></p>
+        <div class="caption">
+          <h3>HTML+CSS</h3>
+          <p>能够熟练运用并搭建页面</p>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-2 text-center">
+        <p><span class="glyphicon glyphicon-grain skill-logo"></span></p>
+        <div class="caption">
+          <h3>Vue</h3>
+          <p>能够熟练使用vue制作组件</p>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-2 text-center">
+        <p><span class="glyphicon glyphicon-wrench skill-logo"></span></p>
+        <div class="caption">
+          <h3>BootStrap</h3>
+          <p>了解栅格系统,可熟练使用BootStrap进行页面布局和搭建</p>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-2 text-center">
+        <p><span class="glyphicon glyphicon-sort skill-logo"></span></p>
+        <div class="caption">
+          <h3>Ajax</h3>
+          <p>了解一定ajax原理，会做基本的异步请求处理</p>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-2 text-center">
+        <p><span class="glyphicon glyphicon-briefcase skill-logo"></span></p>
+        <div class="caption">
+          <h3>ES6</h3>
+          <p>了解ES6的一些用法</p>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-2 text-center">
+        <p><span class="glyphicon glyphicon-star skill-logo"></span></p>
+        <div class="caption">
+          <h3>PS</h3>
+          <p>能够熟练运用PS修图,可用其切图,做简单详情页</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 箭头 -->
+<div class="container">
+  <div class="down-arrow text-center">
+    <a href="#skill" role="button">
+      <span class="glyphicon glyphicon-menu-down"></span>
+    </a>
+  </div>
+</div>
+  <!-- 标签页图文组合-经历 -->
+  <div class="container" id="ex">
+    <div>
+      <ul class="nav nav-tabs" role="tablist" id="tablist">
+        <li role="presentation" class="active rsm-a"><a href="#collage" aria-controls="collage" role="tab"
+            data-toggle="tab">工作经历</a></li>
+        <li role="presentation" class="rsm-a"><a href="#works" aria-controls="works" role="tab"
+            data-toggle="tab">校园经历</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="collage">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5">
+                <img src="./img/tab3.jpg" class="tab-img">
+              </div>
+              <div class="col-md-7">
+                <h2>跨境电商运营</h2>
+                <div class="company">
+                  <p>xx有限公司</p>
+                  <p>2019.06-2020.06</p>
+                </div>
+                <p class="work-content">
+                  负责速卖通和wish平台店铺的运营，对市场经营类目产品销售情况进行调研和分析，据此选品、定价、刊登， 设计店铺优惠券、店铺折扣等活动，根据平台促销活动安排需要促销产品并报名，半年时间实现店铺从初级买
+                  家到高潜卖家的跨越
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="works">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5">
+                <img src="./img/tab2.jpg" class="tab-img">
+              </div>
+              <div class="col-md-7">
+                <h2>xx大学</h2>
+                <div class="company">
+                  <p>xx专业</p>
+                  <p>本科</p>
+                  <p>2015.09-2019.06</p>
+                  <p>GPA:4.1/5</p>
+                </div>
+                <p class="work-content">
+                  主修课程：<br>
+                  xxx<br>
+                  主要经历：<br>
+                <ul class="work-content">
+                  xxx
+                </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 箭头 -->
+<div class="container">
+  <div class="down-arrow text-center">
+    <a href="#skill" role="button">
+      <span class="glyphicon glyphicon-menu-down"></span>
+    </a>
+  </div>
+</div>
+  <!-- 作品 -->
+  <div class="container" id="demo">
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+
+        <img src="./img/demo1.jpg" alt="...">
+        <div class="caption text-center">
+          <h3>Vue仿写美丽说App</h3>
+          <p>项目简介</p>
+          <p>
+            本项目是通过Vue框架仿照美丽说APP搭建相关界面，模拟小型商城的页面布局、交互、数据获取等内容，从而加深对Vue框架的理解和熟练度
+          </p>
+          <p><a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal1">项目详情</a></p>
+        </div>
+
+      </div>
+      <div class="col-lg-6 col-md-12">
+
+        <img src="./img/demo2.jpg" alt="...">
+        <div class="caption text-center">
+          <h3>Bootstrap搭建pc简历</h3>
+          <p>项目简介</p>
+          <p>
+            本项目是通过Boostrap结合css+html+javascript共同搭建个人简历页面，主要目的是为了练习boostrap框架以及页面构建
+          </p>
+          <p><a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal2">项目详情</a></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+    <!-- 箭头 -->
+<div class="container">
+  <div class="down-arrow text-center">
+    <a href="#skill" role="button">
+      <span class="glyphicon glyphicon-menu-down"></span>
+    </a>
+  </div>
+</div>
+  <!-- 轮播图-->
+  <div class="container" id="others">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="./img/others.jpg" alt="...">
+          <div class="carousel-caption">
+            <h2>奖项荣誉</h2>
+            <ul>
+              <li>
+                CET4、CET6，普通话二级甲等
+              </li>
+              <li>2</li>
+              <li>3</li>
+              <li>连续三次获校综合奖学金二等</li>
+            </ul>
+          </div>
+        </div>
+        <div class="item">
+          <img src="./img/others2.jpg" alt="...">
+          <div class="carousel-caption">
+            <h2>爱好</h2>
+            <ul>
+            <li>美食</li>
+            <li>旅游</li>
+            <li>动漫</li>
+            </ul>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 底部 版权相关信息-->
+  <footer class="copy">listeninglonger制作 &copy; 版权归listeninglonger所有</footer>
+  <!-- 模态框 -->
+  <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">项目职责&效果图</h4>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li> 1.通过Vue-CLI快速搭建项目环境，使用Vue2.x开发项目</li>
+
+            <li>2.划分功能页面，封装底部导航组件，使用Vue-router设置路由，<br>从而快速建立单页面应用</li>
+
+            <li>3.使用axios封装网络请求，根据获取数据搭建页面结构，并渲染</li>
+
+            <li> 4.使用Vuex管理公共状态，以便购物车能迅速获得商品信息并操作</li>
+          </ul>
+          <div class="text-center">
+            <p><b>效果图</b></p>
+            <img src="./img/project/vue/index.jpg" alt="">
+            <img src="./img/project/vue/category.jpg" alt="">
+            <img src="./img/project/vue/detail.jpg" alt="">
+            <img src="./img/project/vue/cart.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">项目职责&效果图</h4>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li> 1.划分展示区域：顶部导航，封面，技能，经历，其他以及底部信息</li>
+
+            <li>2.使用bootstrap导航、巨幕、缩略图标签页等组件及插件给页面布局</li>
+
+            <li>3.为相应的区域添加跳转，并为项目添加对应的模态框</li>
+
+            <!-- <li> 4.添加媒体响应，是页面能够自适应pc和移动端</li> -->
+          </ul>
+          <div class="text-center">
+            <p><b>效果图</b></p>
+            <img src="./img/project/bootstrap/cover.png" alt="">
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+<script>
+ $('body').scrollspy({ target: '#navbar-example' })
+</script>
+</html>
